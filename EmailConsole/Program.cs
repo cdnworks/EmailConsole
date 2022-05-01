@@ -34,7 +34,6 @@ Email email = new Email();
 email.SendEmail(host, port, userName, userEmail, userPass, recipientEmail, subject, messageBody);
 
 
-Console.WriteLine("SendMail() called, main continues.");
 Console.ReadKey();
 
 
