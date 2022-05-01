@@ -23,7 +23,7 @@
  1. After cloning the repo, fill out the fields in the App.TEMPLATE.config file
  2. Create a copy/Rename the template file to App.config
  3. After building the project from the solution, you can either run it in debug or run the .exe.
- 4. The console will prompt the user to enter a destination email address, after which it'll send a test message. Use an email you have access to!
+ 4. The console will prompt the user to enter a destination email address, after which it'll send a test message. Please use an email you have access to!
  5. Check the destination email inbox to view your message!
  
 ### App.config settings
