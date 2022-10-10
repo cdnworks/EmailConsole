@@ -12,7 +12,7 @@ string host = ConfigurationManager.AppSettings.Get("host");
 int port = Convert.ToInt32(ConfigurationManager.AppSettings.Get("port"));
 string userName = ConfigurationManager.AppSettings.Get("userName");
 string userEmail = ConfigurationManager.AppSettings.Get("userEmail");
-string userPass = ConfigurationManager.AppSettings.Get("userPass");
+string userPassword = ConfigurationManager.AppSettings.Get("userPass");
 
 
 //this section is temporary until I can reliably send email and complete the other objectives in the project.
@@ -21,7 +21,7 @@ string userPass = ConfigurationManager.AppSettings.Get("userPass");
 Console.Write("Destination Email: ");
 string recipientEmail = Console.ReadLine();
 
-string subject = "Test";
+string messageSubject = "Test";
 string messageBody = "This is a test message";
 
 
@@ -29,9 +29,9 @@ string messageBody = "This is a test message";
 Console.WriteLine("Creating email object, and sending email.");
 
 
-Email email = new Email();
+Email email = new Email(host, port, userName, userEmail, userPassword, recipientEmail, messageSubject, messageBody);
 //SendEmail() is asynchronous, but it's a 'fire and forget' method.
-email.SendEmail(host, port, userName, userEmail, userPass, recipientEmail, subject, messageBody);
+email.SendEmail();
 
 
 Console.ReadKey();
